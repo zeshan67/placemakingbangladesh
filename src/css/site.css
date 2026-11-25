@@ -177,13 +177,6 @@ a.partner:hover strong{color:var(--green)}
 /* ── Closing band ── */
 .cta{background:var(--deep) center/cover;color:var(--paper)}
 .cta h2{color:var(--paper);max-width:17ch;font-size:clamp(32px,5.2vw,76px)}
-/* Home: a glass of tea stands on the footer, as if on a table. */
-.cta-tea{padding-bottom:0}
-.cta-tea .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:var(--gap);align-items:end}
-.cta-copy{padding-bottom:var(--space)}
-/* The base of the glass comes down over the footer, so the footer reads as the table top. */
-.tea{--tea:clamp(200px,25vw,360px);width:var(--tea);margin-right:clamp(0px,3vw,48px);margin-bottom:calc(var(--tea) * -.2);position:relative;z-index:2}
-.page-home .site-foot{position:relative;padding-top:clamp(72px,8vw,120px)}
 
 /* ── Inner page heads ── */
 .page-head{padding:0;color:var(--paper);background:var(--deep) center/cover}
@@ -242,7 +235,12 @@ a.partner:hover strong{color:var(--green)}
 .person .study{margin-top:6px;font-size:15px}
 .person .links{display:flex;gap:18px;margin-top:12px;font-size:15px;font-weight:600}
 .person .links a{color:var(--green);text-underline-offset:4px;padding-block:6px}
-.advocates h2{grid-column:1 / span 4}
+/* A glass of tea stands under the heading, its base on the green band below (the table). */
+.advocates{padding-bottom:0}
+.advocates .grid{grid-template-rows:auto 1fr}
+.advocates h2{grid-column:1 / span 4;grid-row:1}
+.advocates .roll{grid-row:1 / span 2;padding-bottom:var(--space)}
+.tea{--tea:clamp(150px,17vw,240px);width:var(--tea);grid-column:1 / span 4;grid-row:2;align-self:end;margin:40px 0 calc(var(--tea) * -.14) clamp(0px,3vw,44px);position:relative;z-index:2}
 .roll{grid-column:5 / -1;columns:2;column-gap:var(--gap);padding:0;list-style:none}
 .roll li{break-inside:avoid;padding:16px 0;border-top:1px solid var(--rule)}
 .roll b{display:block;font-family:Sora,sans-serif;font-weight:600;font-size:18px;letter-spacing:-.01em}
@@ -290,9 +288,6 @@ a.partner:hover strong{color:var(--green)}
   .golpo-poster{grid-column:1 / span 8}
   .golpo-copy{grid-column:1 / -1;margin-top:32px}
   .partner-row{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .cta-tea .wrap{grid-template-columns:1fr}
-  .cta-copy{padding-bottom:40px}
-  .tea{--tea:min(52vw,230px);justify-self:end;margin-right:0}
   .post.feature{grid-template-columns:1fr}
   .post.feature .thumb{margin-bottom:22px}
   .posts{grid-template-columns:1fr;gap:48px}
@@ -302,8 +297,10 @@ a.partner:hover strong{color:var(--green)}
   .people{grid-template-columns:1fr;gap:28px}
   .person{display:grid;grid-template-columns:104px minmax(0,1fr);column-gap:18px;align-items:start}
   .person .face{grid-row:1 / span 4;margin:0}
-  .advocates h2{grid-column:1 / -1;margin-bottom:24px}
-  .roll{grid-column:1 / -1;columns:1}
+  .advocates .grid{grid-template-rows:none}
+  .advocates h2{grid-column:1 / -1;grid-row:auto;margin-bottom:24px}
+  .advocates .roll{grid-column:1 / -1;grid-row:auto;columns:1;padding-bottom:0}
+  .tea{--tea:min(44vw,190px);grid-column:1 / -1;grid-row:auto;justify-self:end;margin-left:0;margin-top:28px}
   .involve-form,.involve-aside{grid-column:1 / -1}
   .involve-aside{position:static;margin-top:48px}
   .rail-nav .arrow-link{margin-right:auto}
