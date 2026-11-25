@@ -58,16 +58,29 @@ example `npx http-server dist`.
 Pages. In the repository's **Settings > Pages**, **Source** must be set to
 **GitHub Actions**.
 
-### Custom domain
+### Moving www.placemakingbangladesh.org here
 
-1. Add a file named `CNAME` in the top folder containing one line:
-   `www.placemakingbangladesh.org`
-2. At the domain registrar, point the `www` record (CNAME) at `<owner>.github.io`.
-3. In **Settings > Pages**, enter the domain and tick **Enforce HTTPS** once it is offered.
+The domain's DNS is managed at GoDaddy. Only one record changes; email (Zoho) and the
+other records stay exactly as they are.
 
-Until the domain is switched, the site is available at
-`https://<owner>.github.io/<repository>/`; every link inside it is relative, so it works
-at either address.
+1. **GitHub:** repository **Settings > Pages > Custom domain**, enter
+   `www.placemakingbangladesh.org`, **Save**. From this moment the temporary address
+   stops working; the public domain still shows the old site until step 2.
+2. **GoDaddy:** **My Products > placemakingbangladesh.org > DNS**. Edit the `www`
+   record (type CNAME), changing its value from `ghs.googlehosted.com` to
+   `zeshan67.github.io`. Save.
+3. Wait for the check in **Settings > Pages** to turn green (minutes, sometimes up to
+   an hour), then tick **Enforce HTTPS**.
+4. **Google Sites (tidy-up):** in the old site, **Settings > Custom domains**, remove
+   the domain. Keep the old site unpublished or hidden as a backup for a while.
+
+Leave alone: the two `A` records on the bare domain (GoDaddy forwarding, which sends
+`placemakingbangladesh.org` to `www`), the `MX` records (email) and the `TXT` records.
+
+To go back, set the `www` record to `ghs.googlehosted.com` again.
+
+Until the switch, the site is at https://www.asifhasanzeshan.xyz/placemakingbangladesh/.
+Every link inside it is relative, so it works at either address.
 
 ## Credits
 
