@@ -249,15 +249,15 @@ a.partner:hover strong{color:var(--green)}
    The curl comes from pushing them through a fixed field of noise as they rise. */
 .steam-filter{position:absolute}
 .steam{position:absolute;left:-6%;width:86%;bottom:66%;height:150%;pointer-events:none;filter:url(#steam-curl)}
-.steam i{position:absolute;bottom:0;left:var(--x);width:30%;height:26%;border-radius:50%;background:radial-gradient(closest-side,#fff 0,rgba(255,255,255,.92) 34%,rgba(176,186,192,.34) 62%,rgba(176,186,192,0));filter:blur(calc(var(--tea) * .035));opacity:0;animation:steam var(--t) linear var(--wait) infinite;will-change:transform,opacity}
-.steam i:nth-child(1){--x:22%;--t:7.5s;--wait:0s;--sway:22%}
-.steam i:nth-child(2){--x:38%;--t:9s;--wait:-3.1s;--sway:-30%}
-.steam i:nth-child(3){--x:30%;--t:8.2s;--wait:-5.6s;--sway:34%}
-.steam i:nth-child(4){--x:46%;--t:10s;--wait:-7.4s;--sway:-18%}
+.steam i{position:absolute;bottom:0;left:var(--x);width:30%;height:26%;border-radius:50%;background:radial-gradient(closest-side,#fff 0,rgba(255,255,255,.92) 34%,rgba(208,214,218,.2) 62%,rgba(208,214,218,0));filter:blur(calc(var(--tea) * .035));opacity:0;animation:steam var(--t) linear var(--wait) infinite;will-change:transform,opacity}
+.steam i:nth-child(1){--x:22%;--t:13s;--wait:0s;--sway:22%}
+.steam i:nth-child(2){--x:38%;--t:15.5s;--wait:-5.3s;--sway:-30%}
+.steam i:nth-child(3){--x:30%;--t:14s;--wait:-9.6s;--sway:34%}
+.steam i:nth-child(4){--x:46%;--t:17s;--wait:-12.6s;--sway:-18%}
 @keyframes steam{
   0%{transform:translate(0,30%) scale(.45,.6);opacity:0}
-  12%{opacity:1}
-  45%{transform:translate(var(--sway),-130%) scale(1,1.5);opacity:.7}
+  12%{opacity:.7}
+  45%{transform:translate(var(--sway),-130%) scale(1,1.5);opacity:.49}
   100%{transform:translate(calc(var(--sway) * -.7),-330%) scale(1.9,2.3);opacity:0}
 }
 .roll{grid-column:5 / -1;columns:2;column-gap:var(--gap);padding:0;list-style:none}
