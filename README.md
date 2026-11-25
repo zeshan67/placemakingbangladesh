@@ -74,8 +74,19 @@ other records stay exactly as they are.
 4. **Google Sites (tidy-up):** in the old site, **Settings > Custom domains**, remove
    the domain. Keep the old site unpublished or hidden as a backup for a while.
 
-Leave alone: the two `A` records on the bare domain (GoDaddy forwarding, which sends
-`placemakingbangladesh.org` to `www`), the `MX` records (email) and the `TXT` records.
+Leave alone: the `MX` records (email) and the `TXT` records.
+
+**The bare domain.** `placemakingbangladesh.org` without `www` shows a GoDaddy parking
+page, not the site (it did so before the move as well). To send it to the site, in
+GoDaddy's DNS replace the two `A` records on `@` with these four, after which GitHub
+redirects the bare domain to `www` by itself:
+
+```
+A  @  185.199.108.153
+A  @  185.199.109.153
+A  @  185.199.110.153
+A  @  185.199.111.153
+```
 
 To go back, set the `www` record to `ghs.googlehosted.com` again.
 
