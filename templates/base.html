@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<meta name="theme-color" content="#06382C">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Placemaking Bangladesh">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{site_url}}/img/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{{root}}img/icon-48.png" sizes="48x48">
+<link rel="apple-touch-icon" href="{{root}}img/icon-180.png">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=sora@400,600,700&f[]=epilogue@400,500,600&display=swap" rel="stylesheet">
+{{head_extra}}
+<link rel="stylesheet" href="{{root}}css/site.css?v={{version}}">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Placemaking Bangladesh","url":"{{site_url}}/","logo":"{{site_url}}/img/icon-180.png","email":"{{email}}","address":"{{address}}","sameAs":[{{same_as}}]}</script>
+</head>
+<body class="page-{{slug}}">
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-head" id="top">
+  <div class="in">
+    <a class="brand" href="{{root}}" aria-label="Placemaking Bangladesh, home"><img src="{{root}}img/logo.webp" alt="Placemaking Bangladesh" width="640" height="199"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 8h18"/><path class="l2" d="M4 13h18"/><path class="l3" d="M4 18h18"/></svg>
+    </button>
+    <nav class="site-nav" id="nav" aria-label="Main">
+      {{nav}}
+      <a class="btn small" href="{{root}}get-involved/">Get involved</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{content}}
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="{{root}}" aria-label="Placemaking Bangladesh, home"><img src="{{root}}img/logo-red.webp" alt="Placemaking Bangladesh" width="640" height="199" loading="lazy"></a>
+      <nav aria-label="Footer">{{nav}}<a href="{{root}}get-involved/">Get Involved</a></nav>
+    </div>
+    <div class="foot-base">
+      <p>{{address}}</p>
+      <nav aria-label="Social">{{social}}<a href="mailto:{{email}}">Email</a></nav>
+    </div>
+    <p class="credits">Illustration on the home page: Kazi Md. Tahmid, Stories on Three Wheels, 2026.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+<script src="{{root}}js/site.js?v={{version}}" defer></script>
+</body>
+</html>

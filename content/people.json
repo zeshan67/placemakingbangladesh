@@ -1,0 +1,25 @@
+{
+  "initiators": [
+    {"name": "Asif Hasan Zeshan", "image": "person1.webp", "role": "PhD Student, School of Information, University of Arizona", "study": "MS.Arch (University of Arizona), B.Arch (BUET)", "links": [["LinkedIn", "https://www.linkedin.com/in/zeshan67/"], ["Website", "https://www.asifhasanzeshan.xyz/"]]},
+    {"name": "Sadia Tasnim", "image": "person2.webp", "role": "Staff Designer, JM A+D", "study": "MS.Arch (University of Arizona), B.Arch (BUET)", "links": [["LinkedIn", "https://www.linkedin.com/in/sadiatasnim31/"], ["Website", "https://www.sadiatasnimpromi.xyz/"]]},
+    {"name": "Nazifa Tabassum", "image": "person3.webp", "role": "Architect, Max Building Technologies. Partner, Piran Bangladesh", "study": "B.Arch (BUET)", "links": [["LinkedIn", "https://www.linkedin.com/in/nazifa-tabassum-88506a108/"]]}
+  ],
+  "advisors": [
+    {"name": "Khandaker Shabbir Ahmed", "image": "person4.webp", "role": "Professor, Department of Architecture, Bangladesh University of Engineering & Technology. Former President, Institute of Architects, Bangladesh", "study": "PhD (Architectural Association SoA, UK), B.Arch (BUET)", "links": [["LinkedIn", "https://www.linkedin.com/in/khandaker-shabbir-ahmed-82a86724/"], ["Website", "https://www.khandakershabbirahmed.com/"]]},
+    {"name": "Samantha Choudhury", "image": "person5.webp", "role": "Urban Design Professional. Councillor, City of Stonnington, Melbourne. Founder & Director, Gertrude St Studios. Former Principal Placemaking, City of Boroondara", "study": "MDS, B.UPD (University of Melbourne)", "links": [["LinkedIn", "https://www.linkedin.com/in/samantha-choudhury-a36b053a/"], ["Council page", "https://www.stonnington.vic.gov.au/About/About-Council/Mayor-and-Councillors/Cr-Samantha-Choudhury"]]},
+    {"name": "Tanzil Shafique", "image": "person6.webp", "role": "Asst. Professor & Student Recruitment Lead, Sheffield School of Architecture and Landscape. Co-founder, justURBAN. Convenor, Southern Theorising Group (STingG)", "study": "PhD (University of Melbourne), M.Arch (Rensselaer PI), B.Arch (BRACU)", "links": [["LinkedIn", "https://www.linkedin.com/in/tanzilshafique/"], ["University page", "https://www.sheffield.ac.uk/architecture-landscape/people/academic/tanzil-shafique"]]}
+  ],
+  "advocates": [
+    ["Md Atiqur Rahman Khan", "Lecturer, Bangladesh University, Dhaka"],
+    ["Abu Ahmad Badruzzaman Meraaj", "UCSI University, Malaysia"],
+    ["Nusrat Jahan Anita", "BRAC University, Dhaka"],
+    ["Fairooj Rushmila Suhita", "Hobart and William Smith Colleges, Geneva, NY"],
+    ["S. M. Arafat Hossain", "Assistant Professor (Arch), AUST, Dhaka"],
+    ["Raiyaan Mahbub", "UNESCO & Dhaka Makers, Dhaka"],
+    ["Swagota Rownak", "Architect & Researcher, Dhaka"],
+    ["Abdul Aziz", "Researcher, Educator, Monash University, Malaysia"],
+    ["Esaba Muattarun", "Architecture Student, Dhaka"],
+    ["Nazifa Afsin", "Architecture Student, Dhaka"],
+    ["Arina Tahneem", "Assistant Consultant, Road and Transport Program, WRI, Dhaka"]
+  ]
+}

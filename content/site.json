@@ -1,0 +1,27 @@
+{
+  "name": "Placemaking Bangladesh",
+  "url": "https://www.placemakingbangladesh.org",
+  "email": "placemakingbangladesh@gmail.com",
+  "address": "712, Nayanagar, Gulshan, Dhaka 1212, Bangladesh",
+  "form": "https://docs.google.com/forms/d/e/1FAIpQLSfEb_yvkPwA4OqzcIFKBvZ9X_hnlf-lWp9ItIWaqStiH_XWAg/viewform?embedded=true",
+  "more_videos": "https://www.youtube.com/@SaturdayBangladesh",
+  "social": [
+    ["LinkedIn", "https://www.linkedin.com/company/placemakingbangladesh/posts"],
+    ["Instagram", "https://www.instagram.com/placemakingbangladesh/"],
+    ["Facebook", "https://www.facebook.com/placemakingbangladesh"]
+  ],
+  "places": [
+    ["চায়ের দোকান", "a tea stall"],
+    ["ঘাট", "a riverside ghat"],
+    ["মহল্লার গলি", "a moholla lane"],
+    ["রিকশা স্ট্যান্ড", "a rickshaw stand"],
+    ["খেলার মাঠ", "a playing field"],
+    ["উঠান", "a courtyard"]
+  ],
+  "partners": [
+    {"name": "Placemaking X", "role": "Global Networking Partner", "image": "partner-placemakingx.webp", "url": "https://www.placemakingx.org/"},
+    {"name": "Claymire", "role": "Organizational Partner", "image": "partner-claymire.webp", "url": "https://www.claymire.site/"},
+    {"name": "Saturday Bangladesh", "role": "Documentation Partner", "image": "partner-saturday.webp", "url": "https://www.youtube.com/@SaturdayBangladesh"},
+    {"name": "Piran Bangladesh", "role": "Cultural Partner", "image": "partner-piran.webp", "url": ""}
+  ]
+}
