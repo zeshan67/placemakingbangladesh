@@ -1,6 +1,6 @@
 /* Placemaking Bangladesh */
 :root{
-  --green:#046B52; --deep:#06382C; --red:#E3231C; --red-press:#B91A14;
+  --green:#046B52; --deep:#06382C; --red:#CB2B23; --red-press:#A6211A;
   --paper:#FBF7F0; --sand:#F1E6D4; --ink:#14211D; --muted:#46564F; --rule:#D9CDB8;
   --on-deep:#CFE3DA; --edge:#3F7D6B;
   --wrap:1240px; --pad:clamp(20px,4.5vw,64px);
@@ -59,9 +59,8 @@ section{padding-block:var(--space)}
 .arrow-link.on-dark{color:var(--paper)}
 
 /* ── Header ── */
-.site-head{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s,transform .4s var(--ease)}
+.site-head{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
 .site-head.scrolled{border-color:var(--rule)}
-.site-head.hide{transform:translateY(-100%)}
 .site-head .in{max-width:1440px;margin-inline:auto;padding-inline:var(--pad);height:var(--head-h);display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand img{height:42px;width:auto}
 .site-nav{display:flex;align-items:center;gap:clamp(4px,1.6vw,26px)}
@@ -165,7 +164,7 @@ figcaption{margin-top:12px;font-size:14px;color:var(--muted)}
 .deep .story p{color:var(--on-deep)}
 
 /* ── Partners ── */
-.partner-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);margin-top:clamp(28px,4vw,56px)}
+.partner-row{align-items:start;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);margin-top:clamp(28px,4vw,56px)}
 .partner{display:flex;align-items:center;gap:16px;text-decoration:none;padding-top:20px;border-top:1px solid var(--rule)}
 .partner .logo{flex:none;width:72px;aspect-ratio:1;border-radius:6px;overflow:clip;background:#fff}
 .partner .logo img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
@@ -196,8 +195,7 @@ a.partner:hover strong{color:var(--green)}
 .feature-story .play,.feature-story .video-frame{grid-row:1 / span 2}
 .feature-story .story h2{font-size:clamp(24px,2.6vw,38px);margin:0;align-self:end;line-height:1.1}
 .feature-story .story p{font-size:17px;align-self:start;margin-top:16px}
-.story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,56px) var(--gap)}
-.story-grid .story:nth-child(3n+2){margin-top:clamp(0px,5vw,72px)}
+.story-grid{align-items:start;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,56px) var(--gap)}
 .golpo .grid{align-items:center}
 .golpo-poster{grid-column:1 / span 5}
 .golpo-poster img{width:100%;border-radius:6px}
@@ -214,9 +212,8 @@ a.partner:hover strong{color:var(--green)}
 .post.feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--gap);align-items:center}
 .post.feature .thumb img{aspect-ratio:16/11}
 .post.feature h2{font-size:clamp(28px,3.4vw,48px)}
-.posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:var(--space)}
+.posts{align-items:start;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:var(--space)}
 .posts .post .thumb{margin-bottom:22px}
-.posts .post:nth-child(2){margin-top:clamp(0px,5vw,72px)}
 .posts .arrow-link{margin-top:16px;font-size:16px}
 
 /* ── About ── */
@@ -230,8 +227,7 @@ a.partner:hover strong{color:var(--green)}
 .pull-line em{font-style:normal;color:#FFB9B5}
 .pull-line .w{display:inline-block}
 .pull-after{margin-top:clamp(20px,3vw,40px);font-size:clamp(18px,1.8vw,24px)}
-.people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:clamp(28px,4vw,56px)}
-.people .person:nth-child(2){margin-top:clamp(0px,5vw,72px)}
+.people{align-items:start;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:clamp(28px,4vw,56px)}
 .person .face{aspect-ratio:1;border-radius:6px;overflow:clip;background:var(--sand);margin-bottom:20px}
 .person .face img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
 .person:hover .face img{transform:scale(1.03)}
@@ -284,7 +280,6 @@ a.partner:hover strong{color:var(--green)}
   .feature-story .story{grid-template-columns:1fr}
   .feature-story .story h2{margin-top:20px}
   .story-grid{grid-template-columns:1fr}
-  .story-grid .story:nth-child(3n+2),.posts .post:nth-child(2),.people .person:nth-child(2){margin-top:0}
   .golpo-poster{grid-column:1 / span 8}
   .golpo-copy{grid-column:1 / -1;margin-top:32px}
   .partner-row{grid-template-columns:repeat(2,minmax(0,1fr))}

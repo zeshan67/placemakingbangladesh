@@ -15,15 +15,9 @@
   addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); btn.focus(); } });
   matchMedia('(min-width: 901px)').addEventListener('change', () => setMenu(false));
 
-  // ── Header: a rule once the page has moved, and out of the way while reading down ──
+  // ── Header: always on screen, with a rule under it once the page has moved ──
   const head = $('.site-head');
-  let last = 0;
-  addEventListener('scroll', () => {
-    const y = scrollY;
-    head.classList.toggle('scrolled', y > 8);
-    head.classList.toggle('hide', y > 500 && y > last && !nav.classList.contains('open'));
-    last = y;
-  }, { passive: true });
+  addEventListener('scroll', () => head.classList.toggle('scrolled', scrollY > 8), { passive: true });
 
   // ── Videos: the player loads only when a story is pressed ──
   document.addEventListener('click', e => {
