@@ -41,7 +41,16 @@
   <div class="wrap grid">
     <h2>Advocates</h2>
     <ul class="roll">{{advocates}}</ul>
-    <img class="tea" src="{{root}}img/tea.webp" alt="A glass of red tea with a slice of lime" width="640" height="758" loading="lazy">
+    <div class="tea">
+      <div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <img src="{{root}}img/tea.webp" alt="A glass of hot red tea with a slice of lime" width="640" height="758" loading="lazy">
+    </div>
+    <svg class="steam-filter" width="0" height="0" aria-hidden="true" focusable="false">
+      <filter id="steam-curl" x="-40%" y="-20%" width="180%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.011 0.026" numOctaves="2" seed="7"/>
+        <feDisplacementMap in="SourceGraphic" scale="46" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
   </div>
 </section>
 
