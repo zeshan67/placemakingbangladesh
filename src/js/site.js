@@ -45,20 +45,10 @@
     rail.addEventListener('scroll', sync, { passive: true }); addEventListener('resize', sync); sync();
   }
 
-  // ── Rickshaw wheel: 28 crossed spokes ──
-  const spokes = $('#spokes');
-  if (spokes) for (let i = 0; i < 28; i++) {
-    const a = (i / 28) * Math.PI * 2, b = a + (i % 2 ? 0.55 : -0.55);
-    const l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    l.setAttribute('x1', (Math.cos(a) * 12).toFixed(2)); l.setAttribute('y1', (Math.sin(a) * 12).toFixed(2));
-    l.setAttribute('x2', (Math.cos(b) * 86).toFixed(2)); l.setAttribute('y2', (Math.sin(b) * 86).toFixed(2));
-    spokes.appendChild(l);
-  }
-
   if (!window.gsap || calm) return;
   gsap.registerPlugin(ScrollTrigger);
 
-  // ── "A place can be": the word changes on a timer, the wheel turns with the page ──
+  // ── "A place can be": the word changes on a timer ──
   const word = $('#place-word'), gloss = $('#place-gloss');
   if (word) {
     const places = JSON.parse($('#places').textContent);
@@ -76,8 +66,24 @@
       trigger: '.place', start: 'top 80%', end: 'bottom 10%',
       onToggle: self => { if (self.isActive && !running) { running = true; gsap.delayedCall(1.4, turn); } else if (!self.isActive) { running = false; } },
     });
-    gsap.to('#wheel', { rotation: 300, ease: 'none', transformOrigin: '50% 50%',
-      scrollTrigger: { trigger: '.place', start: 'top bottom', end: 'bottom top', scrub: .6 } });
+    // The wheel is driven by the page: scrolling pushes it, and when the page stops it
+    // coasts down to a slow idle turn instead of stopping dead, like a wheel with slack
+    // in its bearings.
+    const wheel = $('#wheel');
+    const IDLE = 2.2;      // degrees per second when nothing is moving
+    const PUSH = 0.16;     // degrees per pixel scrolled
+    const DRAG = 0.045;    // how quickly it gives up speed (smaller = longer coast)
+    let angle = 0, speed = 0, lastY = scrollY, onScreen = false;
+    ScrollTrigger.create({ trigger: '.place', start: 'top bottom', end: 'bottom top', onToggle: self => { onScreen = self.isActive; lastY = scrollY; } });
+    gsap.set(wheel, { transformOrigin: '50% 50%' });
+    gsap.ticker.add((time, delta) => {
+      if (!onScreen) return;
+      const frames = delta / 16.67;
+      const pushed = (scrollY - lastY) * PUSH; lastY = scrollY;
+      speed += (pushed - speed) * Math.min(1, DRAG * frames);
+      angle += speed * frames + IDLE * delta / 1000;
+      gsap.set(wheel, { rotation: angle });
+    });
   }
 
   // ── Home: the photograph drifts as the hero leaves, the poster settles into place ──

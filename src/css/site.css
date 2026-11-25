@@ -119,7 +119,7 @@ section{padding-block:var(--space)}
 .place-slot{height:clamp(62px,13.6vw,196px);overflow:clip;margin-top:clamp(2px,.6vw,10px)}
 .place-word{font-family:"Anek Bangla",Sora,sans-serif;font-weight:700;font-size:clamp(46px,11vw,160px);line-height:1.22;color:var(--green);white-space:nowrap;will-change:transform}
 .place-gloss{margin-top:clamp(6px,1vw,14px);font-size:clamp(18px,2vw,26px);font-weight:500;color:var(--red-press);min-height:1.6em}
-.wheel{position:absolute;right:calc(clamp(60px,9vw,150px) * -1);top:50%;width:clamp(170px,30vw,460px);height:auto;margin-top:calc(clamp(170px,30vw,460px) / -2);color:var(--green);overflow:visible}
+.wheel{position:absolute;right:calc(clamp(70px,11vw,190px) * -1);top:50%;width:clamp(190px,34vw,520px);height:auto;max-width:none;margin-top:calc(clamp(190px,34vw,520px) / -2);will-change:transform;pointer-events:none}
 
 /* ── Home: what we do. The illustration is taller than its section and breaks both edges. ── */
 .does{padding-block:calc(var(--space) * 1.1)}
